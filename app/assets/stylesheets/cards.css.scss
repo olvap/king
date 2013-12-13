@@ -13,7 +13,7 @@
   margin: 1px;
   padding: 10px;
   position: relative;
-  width: 12%;
+  width: 230px;
   .cost {
     background-color: #FFFFFF;
     border-bottom-left-radius: 26px;
@@ -55,6 +55,7 @@
     position: absolute;
     text-align: center;
     width: 85%;
+    bottom: 0px;
     .body{
       padding-top: 12px;
     }
