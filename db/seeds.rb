@@ -13,26 +13,14 @@ end
 keep = Kind.where(name: 'Keep').first
 discard = Kind.where(name: 'Discard').first
 
-cards = [{ name: 'Acid Attack',
-          cost: 6,
-          kind: keep,
-          description: "Deal 1 extra damage each turn (even when you don't otherwise attack)."
-        },
-        { name: 'Alien Metabolism',
-          cost: 3,
-          kind: keep,
-          description: "Buying cards costs you 1 less [Energy]."
-        },
-        { name: 'Alpha Monster',
-          cost: 5,
-          kind: keep,
-          description: "Gain 1[Star] when you attack."
-        },
-        { name: 'Apartment Building',
-          cost: 5,
-          kind: discard,
-          description: "+ 3[Star]"
-        }]
-
 Card.destroy_all
-Card.create cards
+
+File.open(Rails.root.join('db','cards.txt'), "r").each_line do |line|
+  card = line.split(',')
+  puts card
+  Card.create({ name: card[0],
+                cost: card[1],
+                kind: Kind.where(name: card[2]).first,
+                description: card[3]
+              })
+end

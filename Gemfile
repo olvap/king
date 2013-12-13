@@ -44,3 +44,9 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'slim'
+
+group :development do
+  gem 'pry'
+end
+
+gem 'font-awesome-sass'
