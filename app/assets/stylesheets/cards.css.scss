@@ -1,0 +1,44 @@
+// Place all the styles related to the cards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.card {
+  border-color: #000000;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 5px;
+  height: 200px;
+  padding: 10px;
+  width: 22%;
+  position: relative;
+  float: left;
+  margin: 1px;
+  .cost {
+    font-size: 15px;
+    font-size: 35px;
+  }
+
+  .name {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .kind {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .Keep {
+    color: blue;
+  }
+  .Discard{
+    color: red;
+  }
+
+  .description {
+    width: 95%;
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,8 @@
+- @cards.each do |card|
+  .card
+    .cost        = card.cost
+    .name        = card.name
+    .description
+      .kind class = card.kind
+        = card.kind
+      = card.description
