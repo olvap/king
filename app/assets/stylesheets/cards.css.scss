@@ -1,6 +1,13 @@
 // Place all the styles related to the cards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$blue:  #006EA0;
+$green: #D8D33C;
+$red:   #E61B17;
+$black: #000000;
+$white: #FFFFFF;
+
 body {
     margin: 0 !important;
     padding: 0 !important;
@@ -22,7 +29,7 @@ html {
   position: relative;
   width: 210px;
   .cost {
-    background-color: #FFFFFF;
+    background-color: $white;
     border-bottom-left-radius: 26px;
     border-bottom-right-radius: 25px;
     border-top-right-radius: 26px;
@@ -43,20 +50,21 @@ html {
   .kind {
     font-size: 15px;
     font-weight: bold;
-    margin-top: -20px;
+    margin-top: -10px;
     text-align: center;
   }
   .Keep {
-    color: #006EA0;
+    color: $blue;
   }
   .Discard{
-    color: #E61B17;
+    color: $red;
   }
 
   .description {
     background-color: #FFFFFF;
     border-radius: 50px;
-    font-size: 1.1em;
+    font-size: 1em;
+    font-weight: bold;
     margin: auto auto auto -4px;
     padding: 12px;
     position: absolute;
@@ -68,12 +76,18 @@ html {
     }
   }
   .fa-bolt{
-    color: #D8D33C;
+    color: $green;
   }
   .fa-star {
-    color: #006EA0;
+    color: $blue;
   }
   .fa-heart{
-    color: #E61B17;
+    color: $red;
+  }
+  .dice {
+    color: $green;
+  }
+  .fa-stack {
+    width: 1em;
   }
 }
