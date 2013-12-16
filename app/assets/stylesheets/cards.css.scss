@@ -8,9 +8,22 @@ $red:   #E61B17;
 $black: #000000;
 $white: #FFFFFF;
 
+
+@mixin bordered($width, $color) {
+  text-shadow: $width 0 0 $color,
+               $width * -1 0 0 $color,
+               0 $width 0 $color,
+               0 $width * -1 0 $color,
+               $width / 2 $width / 2 $color,
+               $width / -2 $width / -2 0 $color,
+               $width / 2 $width / -2 0 $color,
+               $width / -2 $width / 2 0 $color;
+}
+
 body {
     margin: 0 !important;
     padding: 0 !important;
+    font-family: 'Action Man';
 }
 html {
     margin: auto;
@@ -21,58 +34,63 @@ html {
   border-color: #000000;
   border-radius: 10px;
   border-style: solid;
-  border-width: 2px;
+  border-width: 0px;
   float: left;
   height: 300px;
-  margin: 1px;
+  margin: 0px;
   padding: 10px;
   position: relative;
   width: 210px;
   .cost {
-    background-color: $white;
+    background-color: #FFFFFF;
     border-bottom-left-radius: 26px;
     border-bottom-right-radius: 25px;
     border-top-right-radius: 26px;
-    font-size: 35px;
-    height: 41px;
-    margin: -13px;
-    padding: 7px;
-    width: 40px;
+    float: left;
+    font-family: 'Action Man';
+    font-size: 30px;
+    height: 26px;
+    margin: -11px -2px -2px -11px;
+    padding: 14px 5px 7px;
+    b {
+      font-size: 50px;
+    }
   }
 
   .name {
-    color: #000000;
+    color: #FFFFFF;
+    float: right;
     font-family: 'Action Man';
-    font-size: 34px;
+    font-size: 30px;
     line-height: 31px;
-    margin: auto;
-    max-width: 180px;
+    margin: -5px auto auto;
+    max-width: 150px;
     padding-top: 0;
     text-align: center;
-    text-shadow:2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    @include bordered(4px, $black);
   }
 
   .kind {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
     margin-top: -10px;
     text-align: center;
-    font-family: 'Action Man Shaded';
+    font-family: 'Action Man';
+    color: $white;
   }
   .Keep {
-    color: $blue;
+    @include bordered(2px, $blue);
   }
   .Discard{
-    color: $red;
+    @include bordered(2px, $red);
   }
 
   .description {
     background-color: #FFFFFF;
     border-radius: 50px;
     font-size: 1em;
-    font-weight: bold;
     margin: auto auto auto -4px;
-    padding: 12px;
+    padding: 3px 12px 12px;
     position: absolute;
     text-align: center;
     width: 85%;
