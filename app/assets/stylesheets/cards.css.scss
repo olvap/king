@@ -14,8 +14,8 @@ body {
 }
 html {
     margin: auto;
-
 }
+
 .card {
   background-size: 100% auto;
   border-color: #000000;
@@ -41,10 +41,15 @@ html {
   }
 
   .name {
-    font-size: 20px;
+    color: #000000;
+    font-family: 'Action Man';
+    font-size: 34px;
+    line-height: 31px;
     margin: auto;
-    max-width: 150px;
+    max-width: 180px;
+    padding-top: 0;
     text-align: center;
+    text-shadow:2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
   }
 
   .kind {
@@ -52,6 +57,7 @@ html {
     font-weight: bold;
     margin-top: -10px;
     text-align: center;
+    font-family: 'Action Man Shaded';
   }
   .Keep {
     color: $blue;
@@ -90,4 +96,10 @@ html {
   .fa-stack {
     width: 1em;
   }
+}
+.left{
+  float: left;
+}
+.right {
+  float: right;
 }

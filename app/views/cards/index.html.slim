@@ -1,11 +1,14 @@
 - @cards.each do |card|
   .card style = "background-image: url(/assets/#{card.card_file_name})"
-    .cost
-      = card.cost
-      i.fa.fa-bolt
-    .name        = card.name
-    .description
-      .kind class = card.kind
-        = card.kind
-      .body
-        = description_with_images card.description
+    = link_to 'edit', edit_card_path(card), class: 'right'
+    - unless card.only_image
+      .cost
+        = card.cost
+        i.fa.fa-bolt
+      .name = card.name
+
+      .description
+        .kind class = card.kind
+          = card.kind
+        .body
+          = description_with_images card.description
