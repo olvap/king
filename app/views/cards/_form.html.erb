@@ -27,6 +27,15 @@
     <%= f.label :description %><br>
     <%= f.text_field :description %>
   </div>
+  <div class="field">
+    <%= f.label :has_image %><br>
+    <%= f.check_box :has_image %>
+  </div>
+  <div class="field">
+    <%= f.label :only_image %><br>
+    <%= f.check_box :only_image %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
