@@ -1,11 +1,9 @@
 class Card < ActiveRecord::Base
   belongs_to :kind
 
+  mount_uploader :image, ImageUploader
+
   def card_file_name
-    if has_image
-      "#{ name.downcase.gsub(' ', '_') }.png"
-    else
-      "generic.png"
-    end
+    image.url || 'generic.png'
   end
 end
